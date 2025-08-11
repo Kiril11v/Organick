@@ -1,0 +1,40 @@
+    <header class="header">
+        <nav class="header__nav container">
+            <a href="index.html"><div class="header__nav_logo"> 
+                <img src="img/logo.svg" class="header__nav_logo_img"  alt="logo">
+                <span class="header__nav_logo_text">Organick</span>
+            </div></a>
+            <ul class="header__nav_list">
+                <li class="header__nav_list_item"><a class="header__nav_list_item_text" href="index.html">Home</a></li>
+                <li class="header__nav_list_item"><a class="header__nav_list_item_text" href="about.html">About</a></li>
+                <li class="header__nav_list_item">
+                    <a class="header__nav_list_item_text" href="#">Pages▼</a>
+                    <ul class="header__nav_list_item_pages">
+                        <li class="header__nav_list_item_pages_sites">
+                            <a href="services.html" class="header__nav_list_item_pages_sites_link">Services</a>
+                        </li>
+                        <li class="header__nav_list_item_pages_sites">
+                            <a href="team.html" class="header__nav_list_item_pages_sites_link">Our Team</a>
+                        </li>
+                        <li class="header__nav_list_item_pages_sites">
+                            <a href="contact.html" class="header__nav_list_item_pages_sites_link">Contact Us</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="header__nav_list_item"><a class="header__nav_list_item_text" href="shop.html">Shop</a></li>
+                <li class="header__nav_list_item"><a class="header__nav_list_item_text" href="projects.html">Projects</a></li>
+                <li class="header__nav_list_item"><a class="header__nav_list_item_text" href="news.html">News</a></li>
+            </ul>
+            <div class="header__nav_search">
+                <div class="header__nav_search_input">
+                    <input type="text" class="header__nav_search_input_text" placeholder="Search...">
+                <button class="header__nav_search_input_search-btn"><img src="img/search.svg" alt="search" class="header__nav_search_input_search-btn_img"></button>
+                </div>
+                <div class="header__nav_search_cart">
+                    <button class="header__nav_search_cart_cart-btn"><img src="img/cart.svg" alt="cart"> </button>
+                    <span class="header__nav_search_cart_text">Cart (0)</span>
+                </div>
+            </div>
+        </nav>
+    </header>
+    @@include('mobile-nav.html')

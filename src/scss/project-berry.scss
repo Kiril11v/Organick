@@ -1,0 +1,138 @@
+/* Base */
+@import "./base/reset";
+@import "./base/vars";
+@import "./base/base";
+@import "./base/utils";
+@import "./base/containers";
+@import "./base/sticky-footer";
+@import "./base/variables";
+
+/* Blocks */
+@import "./blocks/*.scss";
+
+// fonts
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&family=Yellowtail&display=swap');
+
+.berry{
+    &__background{
+        background: url('../img/berry-background.jpg') 0 0 no-repeat;
+        background-size: cover;
+        height: 698px;
+        background-position: center;
+        margin-bottom: 150px;
+        @media (max-width: 1184px){
+            margin-bottom: 50px;
+        }
+        &_distance{
+            position: relative;
+            height: 698px;
+        }
+        &_wrapper{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            background-color: #FFFFFF;
+            border-radius: 30px;
+            position: absolute;
+            right: 0;
+            bottom: -10%;
+            @media (max-width: 1184px){
+                background: rgba(255, 255, 255, 0.8);
+                bottom: 0;
+                height: 100%;
+                text-align: center;
+                align-items: center;
+            }
+            &_describe{
+                padding: 97px 63px;
+                box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.08);
+                border-bottom-left-radius: 30px;
+                @media (max-width: 1184px){
+                    box-shadow: none;
+                    padding-bottom: 35px;
+                    padding-top: 20px;
+                }
+                &_title{
+                    @include title-style ($clr: $blue, $h: $h2);
+                    padding-bottom: 20px;
+                }
+                &_text{
+                    @include text ();
+                    font-family: $sans;
+                }
+            }
+            &_details{
+                background-color: #FAFAFA;
+                padding: 77px 63px;
+                border-top-right-radius: 30px;
+                border-bottom-right-radius: 30px;
+                @media (max-width: 1184px){
+                    background: none;
+                    padding-top: 0;
+                    text-align: left;
+                }
+                &_list{
+                    &_item{
+                        padding-bottom: 20px;
+                        &_category{
+                            @include title-style ($clr: $blue, $h: $h7);
+                            font-weight: 500;
+                        }
+                        &_value{
+                            @include text ();
+                            font-family: $sans;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &_block{
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+        &_title{
+            @include title_style ($clr: $blue, $h: $h4);
+            padding: 25px 0;
+        }
+        &_first-text{
+            @include text();
+            font-family: $sans;
+            padding-bottom: 25px;
+        }
+        &_second-text{
+            @include text();
+            font-family: $sans;
+        }
+      }
+      &_image{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &_pic{
+            padding-top: 40px;
+            padding-bottom: 19px;
+            @media (max-width: 800px){
+                width: 536px;
+                height: 326px;
+            }
+            @media (max-width: 576px){
+                width: 436px;
+                height: 280px;
+                object-fit: cover;
+            }
+        }
+        &_text{
+            @include text();
+            font-family: $sans;
+        }
+      } 
+    }
+}

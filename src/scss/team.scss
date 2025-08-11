@@ -1,0 +1,105 @@
+/* Base */
+@import "./base/reset";
+@import "./base/vars";
+@import "./base/base";
+@import "./base/utils";
+@import "./base/containers";
+@import "./base/sticky-footer";
+@import "./base/variables";
+
+/* Blocks */
+@import "./blocks/*.scss";
+
+// fonts
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&family=Yellowtail&display=swap');
+
+.team__banner{
+    background-color: #f5f5f7;
+    &_wrapper{
+        position: relative;
+        max-width: 1400px;
+        &_title{
+                width: 100%;
+                height: 330px;
+                background: url('../img/team_background.jpg') no-repeat center center/cover;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                mask-image: radial-gradient(circle, rgb(0, 0, 0) 85%, rgba(0, 0, 0, 0) 97%);
+                @include title-style($clr: $blue, $h: $h2);
+        }
+        &_img{
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+.our-team{
+    &__contents{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin: 40px 0;
+        &_subtitle{
+            @include subtitle-style ($clr: $green);
+        }
+        &_title{
+            @include title-style ($clr: $blue, $h: $h2);
+        }
+        &_text{
+            @include text ();
+            font-family: $sans;
+            padding-top: 16px;
+        }
+        &_list{
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            gap: 27px;
+            :hover{
+                background-color: #FFFFFF;
+            }
+            &_item{
+                border-radius: 30px;
+                background-color: #F9F8F8;
+                position: relative;
+                &_img{
+                    border-top-left-radius: 30px;
+                    border-top-right-radius: 30px;
+                    width: 370px;
+                }
+                &_name{
+                    @include title-style ($clr: $blue, $h: $h7);
+                    margin: 35px 0 2px 20px;
+                }
+                &_prof{
+                    @include subtitle-style ($clr: $green);
+                    margin-bottom: 35px;
+                    margin-left: 20px;
+                }
+                &_social-media{
+                    display: flex;
+                    gap: 17px;
+                    position: absolute;
+                    right: 28px;
+                    bottom: 34px;
+                }
+            }
+        }
+    }
+}
+.our-team__contents_list_item {
+    transition: transform 0.4s ease;
+  }
+  .our-team__contents_list_item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }

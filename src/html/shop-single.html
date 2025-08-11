@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/shop-single.css"/>
+    <title>Shop single</title>
+</head>
+<body>
+    @@include('blocks/header.html')
+    <section>
+        <div class="shop-single__background">
+            <div class="shop-single__background_wrapper container">
+                <img src="img/shop-single_background.jpg" alt="" class="shop-single__background_wrapper_img">
+                <img src="img/shop-single_elements.png" alt="" class="shop-single__background_wrapper_elements">
+                <h2 class="shop-single__background_wrapper_title">Shop Single</h2>
+            </div>
+        </div>
+    </section>
+    <section class="shop-single container">
+        <div class="shop-single__product">
+            <div class="shop-single__product_image">
+                <p class="shop-single__product_image_categories">Millets</p>
+                <img src="img/shop-single_white_nuts.png" alt="" class="shop-single__product_image_pic">
+            </div>
+            <div class="shop-single__product_describe">
+                <p class="shop-single__product_describe_name">Health Pistachios</p>
+                <img class="shop-single__product_describe_stars" src="img/star.png"/>
+                <div class="shop-single__product_describe_price">
+                <span class="shop-single__product_describe_price_old-price">$20.00</span>
+                <span class="shop-single__product_describe_price_new-price">$13.00</span>
+                </div>
+                <p class="shop-single__product_describe_text">Simply dummy text of the printing and typesetting industry. Lorem had</br>ceased to been the industry's standard dummy text ever since the 1500s,</br>when an unknown printer took a galley.</p>
+                <div class="shop-single__product_describe_choose">
+                    <label for="value" class="shop-single__product_describe_choose_quantity">Quantity :</label>
+                    <input type="number" id="value"  min="1" max="100"  class="shop-single__product_describe_choose_value" >
+                    <div class="shop-single__product_describe_choose_wrapper">
+                        <button class="shop-single__product_describe_choose_wrapper_button">
+                            Add To Cart
+                            <img src="img/aerrow.svg" alt="btn">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="shop-single__information">
+            <input type="radio" name="button" id="button1">
+            <input type="radio" name="button" id="button2">
+            <div class="shop-single__information_tabs">
+            <label for="button1" class="shop-single__information_tabs_button1">Product Description</label>
+            <label for="button2" class="shop-single__information_tabs_button2">Additional Info</label>
+            </div>
+            <p class="shop-single__information_text" id="content1">Welcome to the world of natural and organic. Here you can discover the bounty of nature. We have grown on the principles of health, ecology, and care. We aim to give our customers a healthy chemical-free meal for perfect nutrition. It offers about 8–10% carbs. Simple sugars — such as glucose and fructose — make up 70% and 80% of the carbs in raw.</p>
+            <p class="shop-single__information_text" id="content2">Pistachios may have antioxidant and anti-inflammatory properties that may contribute to boosting brain and gut health while improving blood lipid markers and blood glucose management. These may help reduce the risk of developing chronic conditions like obesity, diabetes, and cardiovascular disease.</p>
+        </div>
+        <div class="shop-single__related-products">
+            <h3 class="shop-single__related-products_title">Related products</h3>
+            <ul class="shop-single__related-products_list">
+                <li class="shop-single__related-products_list_item"><a href="#">
+                    <p class="shop-single__related-products_list_item_categories">Vegetable</p>
+                    <img class="shop-single__related-products_list_item_img" src="img/brokoli.png" alt="pic"/>
+                    <h6 class="shop-single__related-products_list_item_title">Calabrese Broccoli</h6>
+                    <div class="shop-single__related-products_list_item_price">
+                      <p class="shop-single__related-products_list_item_price_new"><span class="shop-single__related-products_list_item_price_old">$20.00</span>$13.00</p>
+                    <img class="shop-single__related-products_list_item_price_img" src="img/star.png"/>
+                    </div>
+                    </a>
+                    </li>
+                    <li class="shop-single__related-products_list_item"><a href="#">
+                        <p class="shop-single__related-products_list_item_categories">Fresh</p>
+                        <img class="shop-single__related-products_list_item_img" src="img/banany.png" alt="pic"/>
+                        <h6 class="shop-single__related-products_list_item_title">Fresh Banana Fruites</h6>
+                        <div class="shop-single__related-products_list_item_price">
+                          <p class="shop-single__related-products_list_item_price_new"><span class="shop-single__related-products_list_item_price_old">$20.00</span>$14.00</p>
+                        <img class="shop-single__related-products_list_item_price_img" src="img/star.png"/>
+                        </div>
+                        </a>
+                        </li>
+                        <li class="shop-single__related-products_list_item"><a href="shop-single.html">
+                            <p class="shop-single__related-products_list_item_categories">Milets</p>
+                            <img class="shop-single__related-products_list_item_img" src="img/white_nuts.png" alt="pic"/>
+                            <h6 class="shop-single__related-products_list_item_title">White Nuts</h6>
+                            <div class="shop-single__related-products_list_item_price">
+                              <p class="shop-single__related-products_list_item_price_new"><span class="shop-single__related-products_list_item_price_old">$20.00</span>$15.00</p>
+                            <img class="shop-single__related-products_list_item_price_img" src="img/star.png"/>
+                            </div>
+                            </a>
+                            </li>
+                            <li class="shop-single__related-products_list_item"><a href="#">
+                                <p class="shop-single__related-products_list_item_categories">Vegetable</p>
+                                <img class="shop-single__related-products_list_item_img" src="img/tomato.png" alt="pic"/>
+                                <h6 class="shop-single__related-products_list_item_title">Vegan Red Tomato</h6>
+                                <div class="shop-single__related-products_list_item_price">
+                                  <p class="shop-single__related-products_list_item_price_new"><span class="shop-single__related-products_list_item_price_old">$20.00</span>$17.00</p>
+                                <img class="shop-single__related-products_list_item_price_img" src="img/star.png"/>
+                                </div>
+                                </a>
+                                </li>
+            </ul>
+        </div>
+    </section>
+    @@include('blocks/footer.html')
+</body>
+</html>

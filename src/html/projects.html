@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/projects.css"/>
+    <title>Projects</title>
+</head>
+<body>
+    @@include('blocks/header.html')
+    <section class="portfolio-background">
+        <div class="portfolio-background__wrapper container">
+            <img src="img/portfolio-background.jpg" alt="" class="portfolio-background__wrapper_img">
+            <img src="img/portfolio-elements.jpg" alt="" class="portfolio-background__wrapper_elements">
+            <h2 class="portfolio-background__wrapper_title">Portfolio Standard</h2>
+        </div>
+    </section>
+    <section class="portfolio container">
+        <ul class="portfolio__list">
+            <li class="portfolio__list_item">
+                <div class="portfolio__list_item_product">
+                    <img src="img/portfolio-lemon.png" alt="" class="portfolio__list_item_product_img">
+                    <a href="#" class="portfolio__list_item_product_link"><img src="img/portfolio_arrow-right.svg" alt="" class="portfolio__list_item_product_link_icon"></a>
+                </div>
+                <p class="portfolio__list_item_title">Green & Tasty Lemon</p>
+                <p class="portfolio__list_item_subtitle">Fruits</p>
+            </li>
+            <li class="portfolio__list_item">
+                <div class="portfolio__list_item_product">
+                    <img src="img/portfolio-carrot.png" alt="" class="portfolio__list_item_product_img">
+                    <a href="#" class="portfolio__list_item_product_link"><img src="img/portfolio_arrow-right.svg" alt="" class="portfolio__list_item_product_link_icon"></a>
+                </div>
+                <p class="portfolio__list_item_title">Organic Carrot</p>
+                <p class="portfolio__list_item_subtitle">Farmer</p>
+            </li>
+            <li class="portfolio__list_item">
+                <div class="portfolio__list_item_product">
+                    <img src="img/portfolio-leaf.png" alt="" class="portfolio__list_item_product_img">
+                    <a href="#" class="portfolio__list_item_product_link"><img src="img/portfolio_arrow-right.svg" alt="" class="portfolio__list_item_product_link_icon"></a>
+                </div>
+                <p class="portfolio__list_item_title">Organic Betel Leaf</p>
+                <p class="portfolio__list_item_subtitle">Leaf</p>
+            </li>
+            <li class="portfolio__list_item">
+                <div class="portfolio__list_item_product">
+                    <img src="img/portfolio-tomato.png" alt="" class="portfolio__list_item_product_img">
+                    <a href="#" class="portfolio__list_item_product_link"><img src="img/portfolio_arrow-right.svg" alt="" class="portfolio__list_item_product_link_icon"></a>
+                </div>
+                <p class="portfolio__list_item_title">Natural Tommato</p>
+                <p class="portfolio__list_item_subtitle">Fruits</p>
+            </li>
+            <li class="portfolio__list_item">
+                <div class="portfolio__list_item_product">
+                    <img src="img/portfolio-raspberry.png" alt="" class="portfolio__list_item_product_img">
+                    <a href="projects-berry.html" class="portfolio__list_item_product_link"><img src="img/portfolio_arrow-right.svg" alt="" class="portfolio__list_item_product_link_icon"></a>
+                </div>
+                <p class="portfolio__list_item_title">Black Raspberry</p>
+                <p class="portfolio__list_item_subtitle">Farmer</p>
+            </li>
+            <li class="portfolio__list_item">
+                <div class="portfolio__list_item_product">
+                    <img src="img/portfolio-orange.png" alt="" class="portfolio__list_item_product_img">
+                    <a href="#" class="portfolio__list_item_product_link"><img src="img/portfolio_arrow-right.svg" alt="" class="portfolio__list_item_product_link_icon"></a>
+                </div>
+                <p class="portfolio__list_item_title">Honey Orange</p>
+                <p class="portfolio__list_item_subtitle">Fruits</p>
+            </li>
+        </ul>
+    </section>
+    @@include('blocks/footer.html')
+</body>
+</html>

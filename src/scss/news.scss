@@ -1,0 +1,137 @@
+/* Base */
+@import "./base/reset";
+@import "./base/vars";
+@import "./base/base";
+@import "./base/utils";
+@import "./base/containers";
+@import "./base/sticky-footer";
+@import "./base/variables";
+
+/* Blocks */
+@import "./blocks/*.scss";
+
+// fonts
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&family=Yellowtail&display=swap');
+
+
+.recentnews__banner{
+    background-color: #f5f5f7;
+    &_wrapper{
+        position: relative;
+        max-width: 1400px;
+        &_title{
+                width: 100%;
+                height: 330px;
+                background: url('../img/background_news.png') no-repeat center center/cover;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                mask-image: radial-gradient(circle, rgb(0, 0, 0) 85%, rgba(0, 0, 0, 0) 97%);
+                @include title-style($clr: $blue, $h: $h2);
+        }
+        &_img{
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+.recentnews{
+    &__list{
+        display: flex;
+        gap: 46px;
+        flex-wrap: wrap;
+        @media (max-width:1176px){
+            flex-direction: column;
+            align-items: center;
+        }
+        &_item{
+            position: relative;
+            height: 426px;
+            margin: 50px 0;
+            @media (max-width:1176px){
+                margin: 0;
+            }
+            &_img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 15px;
+            }
+            &_date{
+                @include date-style();
+                @media (max-width:1170px){
+                    top: 5px;
+                    background: rgba(255, 255, 255, 0.8);
+                }
+            }
+            &_content{
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                padding: 46px 37px 60px 27px;
+                background-color: #FFFFFF;
+                position: relative;
+                max-width: 520px;
+                height: 300px;
+                bottom: 50%;
+                border-radius: 20px;
+                box-shadow: 0px 20px 35px rgba(167, 167, 167, 0.5);
+                left: 17px;
+                overflow: hidden;
+                @media (max-width:1170px){
+                    bottom: 80%;
+                    background: rgba(255, 255, 255, 0.8);
+                }
+                @media (max-width:566px){
+                    left: 0;
+                    height: auto;
+                }
+                &_autor{
+                    @include text();
+                    color: $blue;
+                    &_img{
+                        color: $green;
+                    }
+                }
+                &_title{
+                    @include title-style($clr: $blue, $h: $h7);
+                    padding: 10px 0 5px;
+                }
+                &_text{
+                    @include text();
+                    padding-bottom: 15px;
+                }
+                &_button{
+                    @include button-style ($clr: $blue);
+                    position: relative;
+                    transition: color 0.3s ease;
+                    z-index: 1;
+                    &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background-color: $yellow;
+    z-index: -1;
+    transition: width 0.4s ease;
+    border-radius: 15px;
+  }
+  &:hover{
+    color: $blue;
+  }
+  &:hover::before{
+    width: 100%;
+  }
+                }
+            }
+        }
+    }
+}

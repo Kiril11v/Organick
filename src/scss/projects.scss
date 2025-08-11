@@ -1,0 +1,105 @@
+/* Base */
+@import "./base/reset";
+@import "./base/vars";
+@import "./base/base";
+@import "./base/utils";
+@import "./base/containers";
+@import "./base/sticky-footer";
+@import "./base/variables";
+
+/* Blocks */
+@import "./blocks/*.scss";
+
+// fonts
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&family=Yellowtail&display=swap');
+
+.portfolio-background{
+    background-color: #f9fbfc;
+    @media (max-width: 600px){
+        background-color: #003047;
+    }
+    &__wrapper{
+        display: flex;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        height: 281px;
+        width: 100%;
+        &_img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+                mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 0) 97%);
+        }
+        &_elements{
+            width: 100%;
+            height: 100%;
+            object-fit:cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        &_title{
+            @include title_style ($clr: $blue, $h: $h2);
+            z-index: 1;
+            text-align: center;
+        }
+    }
+}
+.portfolio{
+    &__list{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 24px;
+        justify-content: center;
+        margin-top: 85px;
+        &_item{
+            &_product{
+                position: relative;
+                width: 100%;
+                &_img{
+                    width: 350px;
+                    object-fit: cover;
+                    border-radius: 30px;
+                    @media (max-width: 800px){
+                        width: 250px;
+                    }
+                }
+                &_link_icon{
+                    position: absolute;
+                    top: 36px;
+                    left: 38px;
+                    border-radius: 30px;
+                    padding: 104px 114px;
+                    background-color: #FFFFFFE0;
+                    cursor: pointer;
+                    transform: scale(1);
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: transform 0.3s ease, opacity 0.3s ease;
+                    @media (max-width: 800px){
+                        padding: 60px 64px;
+                    }
+                }
+            }
+            &_title{
+                @include title_style ($clr: $blue, $h: $h7);
+                margin-top: 18px;
+            }
+            &_subtitle{
+                @include subtitle_style ($clr: $green);
+                font-size: $h7;
+                padding-top: 5px;
+            }
+        }
+    }
+}
+
+.portfolio__list_item_product:hover .portfolio__list_item_product_link_icon{
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.2);
+}

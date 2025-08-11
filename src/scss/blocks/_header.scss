@@ -1,0 +1,131 @@
+.header{
+	margin: 50px 0;
+	&__nav {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		font-family: $roboto;
+		color: $blue;
+		font-size: 15px;
+		font-weight: 700;
+		@media (max-width: 1000px){
+				flex-direction:column;
+				row-gap: 20px;
+			}
+		&_logo{
+			display: flex;
+			align-items: center;
+			&_img{
+				padding-right: 8px;
+			}
+			&_text{
+				color: $blue;
+				font-size: $h4;
+			}
+		}
+		&_list{
+			display: flex;
+			gap: 25px;
+			@media (max-width: 400px){
+				flex-direction:column;
+			}
+			&_item{
+				position: relative;
+				border-radius: 8px;
+				&:hover &_pages{
+					display: block;
+				}
+				&_text{
+					color: $blue;
+					 &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0%;
+    height: 2px;
+    background-color: $blue;
+    transition: width 0.3s ease;
+  }
+  &:hover::after {
+    width: 100%;
+	transform: scale(1.05);
+  }
+				}
+				&_pages{
+					display: none;
+					position: absolute;
+					top: 100%;
+					left: -50%;
+					z-index: 999;
+					white-space: nowrap;
+					&_sites{
+						background-color: $light_green;
+						border: solid 1px $blue;
+						border-radius: 4px;
+						transition: background-color 0.3s ease, color 0.3s ease;
+						cursor: pointer;
+						&:hover{
+							background-color: $blue;
+						}
+						&:hover &_link{
+							color: $white;
+						}
+						&_link{
+							color: $blue;
+							display: block;
+							padding: 15px 55px 15px 25px;
+						}
+					}
+				}
+			}
+		}
+
+		&_search{
+			display: flex;
+			gap: 10px;
+			@media (max-width: 400px){
+				flex-direction:column;
+				align-items: center;
+			}
+			&_input{
+				width: 230px;
+				display: flex;
+				justify-content: space-around;
+				align-items: center;
+				height: 50px;
+				padding: 5px;
+				border-radius: 50px;
+				background-color: $white;
+				&_search-btn{
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					padding: 10px;
+					border-radius: 50%;
+					background-color: $green;
+				}
+			}
+			&_cart{
+				display: flex;
+				justify-content: center;
+				width: fit-content;
+				align-items: center;
+				height: 50px;
+				gap: 3px;
+				padding: 5px;
+				border-radius: 50px;
+				background-color: $white;
+				border: solid 1px #E0E0E0;
+				&_cart-btn{
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					padding: 10px;
+					border-radius: 50%;
+					background-color: $blue;
+				}
+			}
+		}
+	}
+}

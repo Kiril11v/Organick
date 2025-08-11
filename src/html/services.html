@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+    <link rel="stylesheet" href="./css/services.css">
+</head>
+<body>
+    @@include('blocks/header.html')
+    <section>
+        <div class="service-background">
+            <div class="service-background__wrapper container">
+                <img src="img/service_background.jpg" alt="" class="service-background__wrapper_img">
+                <img src="img/service_elements.png" alt="" class="service-background__wrapper_elements">
+                <h2 class="service-background__wrapper_title">Services</h2>
+            </div>
+        </div>
+    </section>
+    <section class="service">
+        <div class="container">
+            <p class="service__subtitle">What we Grow</p>
+            <h4 class="service__title">Better Agriculture for</br>Better Future</h4>
+            <div class="service__content">
+                <ul class="service__content_first-list">
+                    <li class="service__content_first-list_item">
+                        <img src="img/service_dairy-products.svg" alt="" class="service__content_first-list_item_img">
+                        <h6 class="service__content_first-list_item_title">Dairy products</h6>
+                        <p class="service__content_first-list_item_text">Sed ut perspiciatis unde omnis iste natus error</br>sit voluptat accusantium doloremqlaudantium.</br>Sed ut perspiciatis</p>
+                    </li>
+                    <li class="service__content_first-list_item">
+                        <img src="img/service_store-service.svg" alt="" class="service__content_first-list_item_img">
+                        <h6 class="service__content_first-list_item_title">Store Services</h6>
+                        <p class="service__content_first-list_item_text">Sed ut perspiciatis unde omnis iste natus error</br>sit voluptat accusantium doloremqlaudantium.</br>Sed ut perspiciatis</p>
+                    </li>
+                    <li class="service__content_first-list_item">
+                        <img src="img/service_delivery-service.svg" alt="" class="service__content_first-list_item_img">
+                        <h6 class="service__content_first-list_item_title">Delivery Services</h6>
+                        <p class="service__content_first-list_item_text">Sed ut perspiciatis unde omnis iste natus error</br>sit voluptat accusantium doloremqlaudantium.</br>Sed ut perspiciatis</p>
+                    </li>
+                </ul>
+                <div class="service__content_img">
+                    <img src="img/service_nuts.png" alt="" class="service__content_img_pic">
+                </div>
+                <ul class="service__content_second-list">
+                    <li class="service__content_second-list_item">
+                        <img src="img/service_agricultural-service.svg" alt="" class="service__content_second-list_item_img">
+                        <h6 class="service__content_second-list_item_title">Agricultural Services</h6>
+                        <p class="service__content_second-list_item_text">Sed ut perspiciatis unde omnis iste natus error</br>sit voluptat accusantium doloremqlaudantium.</br>Sed ut perspiciatis</p>
+                    </li>
+                    <li class="service__content_second-list_item">
+                        <img src="img/service_organic-products.svg" alt="" class="service__content_second-list_item_img">
+                        <h6 class="service__content_second-list_item_title">Organic Products</h6>
+                        <p class="service__content_second-list_item_text">Sed ut perspiciatis unde omnis iste natus error</br>sit voluptat accusantium doloremqlaudantium.</br>Sed ut perspiciatis</p>
+                    </li>
+                    <li class="service__content_second-list_item">
+                        <img src="img/service_fresh-vegetables.svg" alt="" class="service__content_second-list_item_img">
+                        <h6 class="service__content_second-list_item_title">Fresh Vegetables</h6>
+                        <p class="service__content_second-list_item_text">Sed ut perspiciatis unde omnis iste natus error</br>sit voluptat accusantium doloremqlaudantium.</br>Sed ut perspiciatis</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="service__button">
+                <a href="service-single.html"><button class="service__button_link">Explore More
+                    <img src="img/aerrow.svg" alt="">
+                </button></a>
+            </div>
+        </div>
+    </section>
+    <section class="service-video">
+        <div class="service-video__video container">
+            <video src="img/Video_service.mp4" id="videos" preload="auto" muted type="video/mp4"></video>
+            <div class="service-video__video_pause hidden">
+                <button class="service-video__video_pause_button" onclick="PauseVideo()"><img src="img/service-pause.svg" alt="" class="service-video__video_pause_button_img"></button>
+            </div>
+            <div class="service-video__video_background"></div>
+            <div class="service-video__video_play">
+                <p class="service-video__video_play_subtitle">Organic Only</p>
+                <h4 class="service-video__video_play_title">Everyday Fresh & Clean</h4>
+                <p class="service-video__video_play_text">Simply dummy text of the printing and typesetting industry.</p>
+            <button class="service-video__video_play_button" onclick="PlayVideo()"><img src="img/service-play.svg" alt="" class="service-video__video_content_button_img"></button>
+            </div>
+        </div>
+    </section>
+    @@include('blocks/footer.html')
+    <script>
+        const video = document.getElementById ('videos');
+        const preview = document.querySelector ('.service-video__video_play');
+        const background = document.querySelector ('.service-video__video_background');
+        const pause = document.querySelector ('.service-video__video_pause');
+        
+        function PlayVideo () {
+            video.play ();
+            preview.classList.add ('hidden');
+            background.classList.add ('hidden');
+            pause.classList.remove ('hidden');
+        }
+
+        function PauseVideo () {
+            video.pause ();
+            pause.classList.add ('hidden');
+            preview.classList.remove ('hidden');
+            background.classList.remove ('hidden');
+        }
+    </script>
+</body>
+</html>

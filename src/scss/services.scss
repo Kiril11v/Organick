@@ -1,0 +1,239 @@
+/* Base */
+@import "./base/reset";
+@import "./base/vars";
+@import "./base/base";
+@import "./base/utils";
+@import "./base/containers";
+@import "./base/sticky-footer";
+@import "./base/variables";
+
+/* Blocks */
+@import "./blocks/*.scss";
+
+// fonts
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&family=Yellowtail&display=swap');
+
+.service-background{
+   background-color: #F1EFF0;
+   &__wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 276px;
+    width: 100%;
+    &_img{
+        mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 0) 97%);
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+    }
+    &_elements{
+        position: absolute;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+    &_title{
+        z-index: 1;
+        @include title-style($clr: $blue, $h: $h2);
+    }
+  }
+}
+
+.service{
+    background-color: #F9F8F8;
+    padding: 75px 0;
+    &__subtitle{
+        @include subtitle-style($clr: $green);
+        text-align: center;
+    }
+    &__title{
+        @include title-style($clr: $blue, $h: $h4);
+        text-align: center;
+    }
+    &__content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        position: relative;
+        @media (max-width: 1150px){
+                flex-direction: column;
+                margin: 50px 0;
+                }
+        &_first-list{
+            display: flex;
+            flex-direction: column;
+            gap: 39px;
+            z-index: 1;
+             @media (max-width: 1150px){
+                flex-direction: row;
+                }
+                @media (max-width: 793px){
+                flex-direction: column;
+                }
+            &_item{
+                display: flex;
+                flex-direction: column;
+                align-items: end;
+                text-align: right;
+                @media (max-width: 1150px){
+                align-items: flex-start;
+                text-align: left;
+                }
+                @media (max-width: 793px){
+                align-items: center;
+                text-align: center;
+                }
+                &_img{
+                    width: 45px;
+                    height: 42px;
+                }
+                &_title{
+                    @include title-style($clr: $blue, $h: $h6);
+                    font-weight: 500;
+                    padding: 5px 0;
+                }
+                &_text{
+                    @include text ();
+                    font-family: $sans;
+                }
+            }
+        }
+        &_img{
+            @media (max-width: 1150px){
+                display: none;
+                }
+            &_pic{
+                width: 300px;
+                object-fit: cover;
+                height: 630px;
+                filter: drop-shadow(0 15px 6px rgba(0, 0, 0, 0.3));
+            }
+        }
+        &_second-list{
+            display: flex;
+            flex-direction: column;
+            gap: 39px;
+            z-index: 1;
+            @media (max-width: 1150px){
+                flex-direction: row;
+                }
+            @media (max-width: 793px){
+                flex-direction: column;
+                }
+            &_item{
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                @media (max-width: 793px){
+                align-items: center;
+                text-align: center;
+                }
+                &_img{
+                    width: 45px;
+                    height: 42px;
+                }
+                &_title{
+                    @include title-style($clr: $blue, $h: $h6);
+                    font-weight: 500;
+                    padding: 5px 0;
+                }
+                &_text{
+                    @include text ();
+                    font-family: $sans;
+                }
+            }
+        }
+    }
+    &__button{
+        display: flex;
+        justify-content: center;
+        &_link{
+            @include button-style($bgr: $white, $clr: $blue, $brd: solid 2px $blue);
+            transition: background-color 0.3s ease, color 0.3s ease;
+            &:hover{
+                background-color: $blue;
+                color: $white;
+            }
+        }
+    }
+}
+.service-video{
+    width: 100%;
+  position: relative;
+    background-image: url('../img/video-background.png');
+    &__video{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        &_pause{
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        overflow: hidden;
+        height: 100%;
+      width: 100%;
+        &_button{
+            &_img{
+                width: 50px;
+                height: 50px;
+            }
+        }
+        }
+        &_background{
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            background-image: url('../img/video-background.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100%;
+            width: 100%;
+        }
+        &_play{
+             position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+            &_subtitle{
+                @include subtitle-style($clr: $green);
+            }
+            &_title{
+                @include title-style ($clr: $blue, $h: $h4);
+            }
+            &_text{
+                @include text ();
+                font-family: $sans;
+                padding-top: 20px;
+                padding-bottom: 50px;
+            }
+        }
+    }
+}
+
+video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50px;
+    @media (max-width: 900px){
+                height: 494px;
+    }
+}
+.hidden{
+    display: none;
+}
