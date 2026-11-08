@@ -3,6 +3,7 @@
 		"@babel/core": "^7.22.5",
 		"@babel/preset-env": "^7.22.5",
 		"css-loader": "^6.8.1",
+		"gh-pages": "^6.3.0",
 		"gulp": "^4.0.2",
 		"gulp-autoprefixer": "^8.0.0",
 		"gulp-babel": "^8.0.0",
@@ -22,11 +23,18 @@
 		"gulp-webp": "^4.0.1",
 		"gulp-webp-css": "^1.1.0",
 		"gulp-webp-html": "^1.0.2",
+		"html-webpack-plugin": "^5.6.8",
 		"i": "^0.3.7",
 		"npm": "^9.7.2",
 		"sass": "^1.63.6",
 		"style-loader": "^3.3.3",
+		"webpack-cli": "^7.3.1",
 		"webpack-stream": "^7.0.0"
+	},
+	"scripts": {
+		"build": "webpack --mode production",
+		"predeploy": "npm run build",
+		"deploy": "gh-pages -d dist"
 	},
 	"babel": {
 		"presets": [
