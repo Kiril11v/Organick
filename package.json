@@ -32,9 +32,9 @@
 		"webpack-stream": "^7.0.0"
 	},
 	"scripts": {
-		"build": "webpack --mode production",
+		"build": "gulp",
 		"predeploy": "npm run build",
-		"deploy": "gh-pages -d dist"
+		"deploy": "gh-pages -d build"
 	},
 	"babel": {
 		"presets": [
@@ -43,5 +43,8 @@
 	},
 	"browserslist": [
 		"last 5 versions"
-	]
+	],
+	"dependencies": {
+		"slick-carousel": "^2.0.0"
+	}
 }

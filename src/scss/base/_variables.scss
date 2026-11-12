@@ -38,33 +38,33 @@ $curs: "Yellowtail";
  font-weight: $font_large;
  font-family: $roboto;
  font-size: $p;
- }
+}
 
-@mixin subtitle-style ($clr: $white $green){
-    font-family: $curs;
-    font-weight: $font_small;
-    font-size: $h6;
-    color: $clr;
-    padding-bottom: 10px;
- }
+@mixin subtitle-style ($clr: $white $green) {
+   font-family: $curs;
+   font-weight: $font_small;
+   font-size: $h6;
+   color: $clr;
+   padding-bottom: 10px;
+}
  
- @mixin title-style ($clr: $blue $white, $h: $h4 $h2 $h5 $h6 $h7 $p) {
-    font-family: $roboto;
-    font-weight: $font_large;
-    font-size: $h;
-    color: $clr;
-    line-height: 100%;
- }
-
- @mixin text(){
+@mixin title-style ($clr: $blue $white, $h: $h4 $h2 $h5 $h6 $h7 $p) {
    font-family: $roboto;
-    font-weight: $font_small;
-    font-size: $p;
-    color: $black;
-    line-height: 165%;
- }
+   font-weight: $font_large;
+   font-size: $h;
+   color: $clr;
+   line-height: 100%;
+}
 
- @mixin cat-style (){
+@mixin text(){
+   font-family: $roboto;
+   font-weight: $font_small;
+   font-size: $p;
+   color: $black;
+   line-height: 165%;
+}
+
+@mixin cat-style (){
    font-family: $sans;
    font-weight: 600;
    font-size: 15px;
@@ -76,19 +76,19 @@ $curs: "Yellowtail";
    max-width: fit-content;
    color: $white;
    background-color: $blue;
- }
+}
 
- @mixin date-style(){
-                font-weight: 800;
-                font-family: $roboto;
-                font-size: $h7;
-                color: $blue;
-                position: absolute;
-                top: 38px;
-                left: 55px;
-                z-index: 1;
-                padding: 10px 15px;
-                text-align: center;
-                border-radius: 50%;
-                background-color: #FFFFFF;
- }
+@mixin date-style(){
+   font-weight: 800;
+   font-family: $roboto;
+   font-size: $h7;
+   color: $blue;
+   position: absolute;
+   top: 38px;
+   left: 55px;
+   z-index: 1;
+   padding: 10px 15px;
+   text-align: center;
+   border-radius: 50%;
+   background-color: #FFFFFF;
+}

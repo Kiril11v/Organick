@@ -33,50 +33,50 @@
                     }
                 }
             }
-        &_img-one{
+            &_img-one{
+                position: absolute;
+            }
+        }
+        &_content{
+            top: 30%;
+            left: 13%;
             position: absolute;
-        }
-      }
-      &_content{
-        top: 30%;
-        left: 13%;
-        position: absolute;
-        &_subtitle{
-            @include subtitle-style ($clr: $green);
-            @media (max-width:880px) {
-                font-size: $h7;
+            &_subtitle{
+                @include subtitle-style ($clr: $green);
+                @media (max-width:880px) {
+                    font-size: $h7;
+                }
+                @media (max-width:600px) {
+                    color: $black;
+                }
             }
-            @media (max-width:600px) {
-                color: $black;
+            &_title{
+                @include title-style ($clr: $blue, $h: $h2);
+                @media (max-width:1150px) {
+                    font-size: $h4;
+                }
+                @media (max-width:880px) {
+                    font-size: $h6;
+                }
             }
-        }
-        &_title{
-            @include title-style ($clr: $blue, $h: $h2);
-            @media (max-width:1150px) {
-                font-size: $h4;
-            }
-            @media (max-width:880px) {
-                font-size: $h6;
-            }
-        }
-        &_button{
-            @include button-style($bgr:$yellow, $clr:$blue, $brd:none);
-            margin-top: 5px;
-            transition: background-color 0.3s ease, color 0.3s ease;
-            &:hover{
-                background-color: $blue;
-                color: $white;
-            }
-            @media (max-width:880px) {
-                padding: 15px 20px;
-                font-weight: $font_large;
-                font-size: 12px;
-            }
-            @media (max-width:600px) {
-                border: 2px solid $black;
+            &_button{
+                @include button-style($bgr:$yellow, $clr:$blue, $brd:none);
+                margin-top: 5px;
+                transition: background-color 0.3s ease, color 0.3s ease;
+                &:hover{
+                    background-color: $blue;
+                    color: $white;
+                }
+                @media (max-width:880px) {
+                    padding: 15px 20px;
+                    font-weight: $font_large;
+                    font-size: 12px;
+                }
+                @media (max-width:600px) {
+                    border: 2px solid $black;
+                }
             }
         }
-      }
     }
 }
 
